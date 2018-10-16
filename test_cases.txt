@@ -1,0 +1,100 @@
+
+This test cases is for customerRepo class
+=========================================
+
+A)Feature: Account Holder withdraws cash
+
+  Scenario: Account has sufficient funds
+   Given the account balance is rs 1000
+     And the card is valid
+     And the machine contains enough money  
+    When the Account Holder requests rs 400
+    Then the ATM should dispense rs 400
+     And the account balance should be rs 600
+     And the card should be returned
+
+B)Feature: We need to fetch the customer from collection
+
+  Scenario: Find customer by id and mobile number
+   Given the account id should correct 
+     And the mobile number is valid
+     And the collection should contain that object
+    When the passing invalid id and mobile number
+    Then the throw invalid input exception
+     And the pass exception meaningful massage
+     And the card should be returned
+
+C)Feature: We need to save passing customer object
+
+  Scenario: Save customer object in collection with some parameter
+   Given the customer parameter should not null if null
+    Then the throw nullPointerexception
+     And the Should pass object of instanceOf customer class
+    When the passing object is not instance of customer class
+    Then the throw ClassCastException incompatible types
+     And the pass exception meaningful massage
+     And the return to the caller method
+
+D)Feature: We need to fetch customer object
+
+  Scenario: Find customer by passing parameter 
+   Given the Every parameter need to check null or not,if null
+    Then the throw nullPointerexception
+     And the Should check compatibility of an parameter 
+    When the passing parameter is not compatible 
+    Then the compatibility problem is there 
+     And the pass exception meaningful massage
+     And the return to the caller method
+
+E)Feature: Send customer object to store
+
+  Scenario: Save customer object in collection with some parameter
+   Given the customer parameter should not null if null
+    Then the throw nullPointerexception
+     And the Should pass object of instanceOf class
+    When the passing object is not instance of customer class
+    Then the throw ClassCastException incompatible types
+     And the pass exception meaningful massage
+     And the return to the caller method
+	 
+	 Feature: Send customer object to store in collection
+
+F)Scenario: Find customer by passing mobile number as parameter
+   Given the string parameter should not null if null
+    Then the throw nullPointerexception and send valid massage 
+     And the Should pass object of string class if other 
+    When the passing object is not instance of customer class
+    Then the throw ClassCastException incompatible types
+     And the pass exception meaningful massage
+     And the return to the caller method
+	 
+G)Scenario: Display customer current balance 
+   Given the passing string mobile number should not null,if null
+    Then the throw nullPointerexception and send valid massage 
+     And the mobile should not negative and should in number format only, if not 
+	 And the throw InvalidMobileNumberException 
+    When the passing parameter should be in the form of string only
+    Then the throw incompatible types parameter
+     And the pass exception meaningful massage
+     And the return to the caller method
+	 
+H)Scenario: Add customer object by passing some parameter 
+   Given the customer name ,mobile number and wallet amount we need to check these all parameter
+   is null or not,if any one of these is null
+    Then the throw nullPointerexception and send valid massage 
+	 And name is should i the format of string only if not then 
+	Then throw invalid format string exception
+     And the mobile should not negative and should in number format only, if not 
+	 And the throw InvalidMobileNumberException 
+    When All parameter is valid in required format 
+    Then the add customer object with passing values
+     And the pass meaningful massage to method caller
+     And the return to the caller method
+	 
+	 
+	 
+
+	 
+	 
+
+
